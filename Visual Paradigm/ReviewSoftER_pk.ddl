@@ -1,0 +1,16 @@
+ALTER TABLE Software ADD PRIMARY KEY (num_software);
+ALTER TABLE Comparacion ADD PRIMARY KEY (num_comparacion);
+ALTER TABLE Categoria ADD PRIMARY KEY (num_categoria);
+ALTER TABLE Categoria_Software ADD PRIMARY KEY (num_software, num_categoria);
+ALTER TABLE Propietario ADD PRIMARY KEY (num_propietario);
+ALTER TABLE Plataforma ADD PRIMARY KEY (num_plataforma);
+ALTER TABLE Plataforma_soportada ADD PRIMARY KEY (num_plataforma, num_software);
+ALTER TABLE [Plan] ADD PRIMARY KEY (num_plan);
+ALTER TABLE Precio ADD PRIMARY KEY (num_plan, num_software);
+ALTER TABLE Retroalimentacion ADD PRIMARY KEY (usuario, num_software);
+ALTER TABLE Metrica ADD PRIMARY KEY (num_metrica);
+ALTER TABLE Puntaje ADD PRIMARY KEY (num_metrica, usuario, num_software);
+ALTER TABLE Software_participante ADD PRIMARY KEY (num_comparacion, num_software);
+ALTER TABLE Recomendacion ADD PRIMARY KEY (num_recomendacion);
+ALTER TABLE Usuario ADD PRIMARY KEY (usuario);
+ALTER TABLE Rol ADD PRIMARY KEY (id_rol);
