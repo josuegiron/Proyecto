@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="publica_include_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../../css/Estilos.css" rel="stylesheet" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Body">
+        <div class='cFL cPosRel' id="Top">
+            <img alt='' src="../include/imagenes/top.png" />
+        </div>
+        <div class='cFL cPosRel' id="Left">
+            <div class='wrap'>
+                <div class='graphite demo-container'>
+                    <ul class='accordion' id='Acordion'>
+                        <asp:Literal ID="ltMenu" runat="server" ></asp:Literal>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='cFL cPosRel' id="Content">
+            <img alt='' src="../include/imagenes/content.png" />
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class='cFL cPosRel' id="Footer">
+            <img alt='' src="../include/imagenes/footer.png" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>
