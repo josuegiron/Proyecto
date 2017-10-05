@@ -9,6 +9,14 @@ public partial class public_principal_index : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        string userLogin = (string)Session["userLogin"];
+        if (!IsPostBack)
+        {
+            if(userLogin == "" || userLogin == null)
+            {
+                Response.Redirect("~/Ingresar.aspx");
+            }
+        }
 
     }
 }
