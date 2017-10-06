@@ -28,7 +28,8 @@ CREATE TABLE Software (
 CREATE TABLE Comparacion (
   num_comparacion int IDENTITY NOT NULL, 
   fecha           date NOT NULL, 
-  usuario         int NOT NULL);
+  usuario         char(100) NOT NULL, 
+  num_usuario     int NOT NULL);
 CREATE TABLE Categoria (
   num_categoria int IDENTITY NOT NULL, 
   nom_categoria char(100) NOT NULL, 
@@ -65,8 +66,8 @@ CREATE TABLE Precio (
   precio           float(10) NOT NULL, 
   espesificaciones char(300) NOT NULL);
 CREATE TABLE Retroalimentacion (
-  usuario         int NOT NULL, 
   num_software    int NOT NULL, 
+  num_usuario     int NOT NULL, 
   experiencia_uso char(300) NOT NULL, 
   ventajas        char(200) NOT NULL, 
   desventajas     char(200) NOT NULL, 
@@ -79,8 +80,8 @@ CREATE TABLE Metrica (
   descripcion char(300) NOT NULL);
 CREATE TABLE Puntaje (
   num_metrica  int NOT NULL, 
-  usuario      int NOT NULL, 
   num_software int NOT NULL, 
+  num_usuario  int NOT NULL, 
   puntaje      int NOT NULL);
 CREATE TABLE Software_participante (
   num_comparacion int NOT NULL, 
@@ -91,15 +92,15 @@ CREATE TABLE Recomendacion (
   fecha             date NOT NULL, 
   num_comparacion   int NOT NULL);
 CREATE TABLE Usuario (
-  usuario      int IDENTITY NOT NULL, 
-  nombre       char(100) NOT NULL, 
-  apellido     char(100) NOT NULL, 
-  fecha_nac    date NOT NULL, 
-  coreo        varchar(100) NOT NULL, 
-  pasword      varchar(100) NOT NULL, 
-  profesion    char(100) NOT NULL, 
-  tipo_usuario char(20) NOT NULL, 
-  id_rol       int NOT NULL);
+  num_usuario int IDENTITY NOT NULL, 
+  usuario     char(100) NOT NULL UNIQUE, 
+  password    varchar(1000) NOT NULL, 
+  nombre      char(100) NOT NULL, 
+  apellido    char(100) NOT NULL, 
+  fecha_nac   date NOT NULL, 
+  correo      varchar(100) NOT NULL, 
+  profesion   char(100) NOT NULL, 
+  id_rol      int NOT NULL);
 CREATE TABLE Rol (
   id_rol  int IDENTITY NOT NULL, 
-  nom_rol char(100) NULL);
+  nom_rol char(100) NULL UNIQUE);
