@@ -63,6 +63,11 @@ public partial class Registro : System.Web.UI.Page
         selFecha.Text = Calendar1.SelectedDate.ToShortDateString();
         Calendar1.Visible = false;
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+
+    }
 }
 
    

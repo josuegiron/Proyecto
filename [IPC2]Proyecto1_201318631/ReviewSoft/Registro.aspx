@@ -1,26 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Registro.aspx.cs" Inherits="Registro" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="css/Login.css" rel="stylesheet" type="text/css" />
-    <title></title>
-</head>
-<body>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/public/include/MasterPage.master" CodeFile="Registro.aspx.cs" Inherits="Registro" %>
+
+<asp:Content ID="Content" ContentPlaceHolderID="Contenido" runat="Server">
     <form id="form2" runat="server">
-    <div class="FormaRegisto">
-        <div class="LeftFormaLogin">
-        </div>
-        <div class="CenterFormaLogin">
-            <div class="cPosRel" style="width: 370px; height: 90px; margin: 34px auto 0px auto; text-align:justify;">
-                <span class="TextoBienvenido">Al ingresar al Sistema ústed está de acuerdo en aceptar
-                    nuestros Términos y condiciones legales, cualquier cambio que realize en esta página
-                    será monitoreado.</span>
-                <br />
-                <span>
-                    <%= Request.ServerVariables["REMOTE_ADDR"]%></span><br />
-                <span>
-                    <asp:Literal ID="ltMac" runat="server"></asp:Literal></span>
-            </div>
             <div class="cFL cPosRel" style="width: 450px; height: auto;">
                 <div class="cFL cPosRel" style="width: 100px; height: 25px;">
                     <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Usuario:</span>
@@ -94,16 +75,12 @@
                  
                 <div class="cFL cPosRel" style="width: 460px;">
                     <div style="width: 120px; height: 30px; margin-left: auto; margin-right: auto; margin-top: 15px;">
-                        <asp:ImageButton ID="btnRegistrar" ImageUrl="~/public/include/imagenes/login/ingresarsistema.jpg" runat="server" OnClick="btnRegistrar_Click" />
+                        <asp:Button ID="ptnRegistrar" runat="server"  CssClass="button" OnClick="btnRegistrar_Click" Text="Registrar" />
                     </div>
                 </div>
             </div>
             <asp:Label ID="lblMensaje" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
                     
-        </div>
-        <div class="RightFormaLogin">
-        </div>
-    </div>
+     
     </form>
-</body>
-</html>
+</asp:Content>

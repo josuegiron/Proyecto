@@ -29,8 +29,5 @@ public partial class Ingresar : System.Web.UI.Page
             lblMensaje.Text = "Usuario o contraseña incorrecta, verifique por favor.";
         }
     }
-    protected void btnRegistrar_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~/Registro.aspx");
-    }
+   
 }
