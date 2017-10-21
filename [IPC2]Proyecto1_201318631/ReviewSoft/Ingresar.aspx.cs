@@ -21,6 +21,8 @@ public partial class Ingresar : System.Web.UI.Page
             DataTable tblUsuario = ServiciosSQL.prConsultaUsuario(usuario, contraseña);
             //LoginService.Security(Convert.ToInt32(tblUsuario.Rows[0]["usuario"]), usuario, DateTime.Now, Request.ServerVariables["REMOTE_ADDR"]);
             Session["userLogin"] = tblUsuario.Rows[0]["num_usuario"].ToString();
+            Session["userType"] = tblUsuario.Rows[0]["id_rol"].ToString();
+
             Response.Redirect("~/public/principal/index.aspx");
         }
         else

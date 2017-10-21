@@ -1,31 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/public/include/MasterPage.master" AutoEventWireup="true" CodeFile="Ingresar.aspx.cs" Inherits="Ingresar" %>
 
+<asp:Content ID="head" runat="server" ContentPlaceHolderID="head" >
+    <link href="css/Estilo.css" type="text/css" rel="stylesheet" id="stylesheet"  />
+    <title>Ingresar</title>
+</asp:Content>
+
 <asp:Content ID="Content" ContentPlaceHolderID="Contenido" runat="Server">
-
+   
     <form id="form1" runat="server">
-        <div style="height: auto">
-            <div style="height: auto">
-            <span class="" style="margin-top: 7px;">Usuario:</span>
-            <asp:TextBox ID="txtUsuario" CssClass="" runat="server"></asp:TextBox>
+        <div>
+            <div>
+                <asp:TextBox ID="txtUsuario" CssClass="textbox" runat="server" placeholder="Usuario"></asp:TextBox>
             </div>
-            <div style="height: auto">
-            <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Password:</span>
-            <asp:TextBox ID="txtContraseña" TextMode="Password" CssClass="txtControl" runat="server"></asp:TextBox>
+            <div >
+                <asp:TextBox ID="txtContraseña" TextMode="Password" CssClass="textbox" runat="server"  placeholder="Contraseña"></asp:TextBox>
             </div>
-            <div style="height: auto">
+            <div>
                 <div>                
-                    <asp:Button CssClass="button1"  ID="btnIniciar" runat="server" OnClick="btnIniciar_Click" Text="Ingresar" />
-
+                    <asp:Button ID="btnIniciar" CssClass="boton-accion" OnClick="btnIniciar_Click"  Text="Ingresar" runat="server"></asp:Button>
+                    
                 </div>
-                <div class="button">
-                    <a href="Registro.aspx">Registrar</a>
+                <div>
+                    <a class="button a" href="Registro.aspx">Registrar</a>
                 </div>
-                <asp:Label ID="lblMensaje" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
+                    <asp:label id="lblMensaje" class="cFL" runat="server" forecolor="#996600"></asp:label>
             </div>
-
         </div>
-                
-         
     </form>
 
 </asp:Content>

@@ -66,7 +66,7 @@ public static class ServiciosSQL
     }
     public static DataTable prConsultaUsuario(string usuario, string password)
     {
-        string sql = @"SELECT num_usuario
+        string sql = @"SELECT num_usuario, id_rol
                             FROM Usuario
                             WHERE usuario = @Username AND password = @password";
 

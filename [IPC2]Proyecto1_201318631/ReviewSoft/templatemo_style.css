@@ -16,6 +16,9 @@ body {
 	background-color: #f6f2e6;
 }
 
+
+
+
 a, a:link, a:visited {
 	color: #990000;
 }
@@ -79,7 +82,7 @@ cite span { color: #000; }
 	width: 92px;
 	height: 24px;
 	padding: 5px 0 0 0;
-	background:	url(../images/templatemo_button.png) no-repeat;
+	background:	url('../../../../images/templatemo_button.png') no-repeat;
 	color: #AAAAAA;
 	font-weight: bold;
 	font-size: 11px;
@@ -89,13 +92,17 @@ cite span { color: #000; }
 
 .button a:hover {
 	color: #FFFFFF;
-	background: url(../images/templatemo_button_hover.png) no-repeat;
+	background: url('../../../../images/templatemo_button_hover.png') no-repeat;
 }
+
+
+
+
 
 ul {
 	margin: 20px;
 	padding: 0;
-	list-style-image:  url(../images/list_icon.png);
+	list-style-image:  url('../../../../images/list_icon.png');
 }
 
 ul li {
@@ -109,7 +116,7 @@ ul li {
 #templatemo_header_wrapper {
 	width: 100%;
 	height: 80px;
-    background: url(../images/templatemo_header.jpg) repeat-x;
+    background: url('../../../../images/templatemo_header.jpg') repeat-x;
 }
 
 #templatemo_header {
@@ -195,7 +202,7 @@ ul li {
 #templatemo_slider_wrapper {
 	width: 100%;
 	height: 270px;
-	background: url(../images/templatemo_slider.jpg) repeat-x;
+	background: url('../../../../images/templatemo_slider.jpg') repeat-x;
 }
 
 #templatemo_slider {
@@ -213,7 +220,7 @@ ul li {
 	clear: both;
 	width: 100%;
 	height: 150px;
-	background: url(../images/templatemo_top_row.jpg) repeat-x; 
+	background: url('../../../../images/templatemo_top_row.jpg') repeat-x; 
 	border-bottom: 1px solid #161311;
 }
 
@@ -229,7 +236,7 @@ ul li {
 	width: 260px;
 	height: 110px;
 	padding: 20px 45px 20px 15px;
-	background: url(../images/templatemo_top_row_divider.png) right center no-repeat;
+	background: url('../../../../images/templatemo_top_row_divider.png') no-repeat right center;
 }
 
 #templatemo_top_row .last {
@@ -250,7 +257,7 @@ ul li {
 #templatemo_content_wrapper {
 	clear: both;
 	width: 100%;
-	background: url(../images/templatemo_content.jpg) top repeat-x;
+	background: url('../../../../images/templatemo_content.jpg') repeat-x 50% top;
 	border-bottom: 1px solid #fff;	
 }
 
@@ -270,7 +277,7 @@ ul li {
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 	border-bottom: 1px solid #CCC;
-	background: url(images/templatemo_divider.jpg) bottom repeat-x;	
+	background: url('../../../images/templatemo_divider.jpg') repeat-x 50% bottom;
 }
 
 .services_section h4 {
@@ -436,3 +443,4 @@ ul li {
 	color: #6e6965;
 }
 /* end of copyright */
+

@@ -41,6 +41,7 @@ public partial class Registro : System.Web.UI.Page
             if (ejecutar == 7)
             {
                 ServiciosSQL.registrarUsuario(usuario, password, nombre, apellido, fecha_nac, correo, profesion, 1);
+                Response.Redirect("ingresar.aspx");
             }
         }
         else

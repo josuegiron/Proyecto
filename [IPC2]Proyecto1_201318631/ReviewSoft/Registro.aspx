@@ -1,86 +1,78 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/public/include/MasterPage.master" CodeFile="Registro.aspx.cs" Inherits="Registro" %>
-
+<asp:Content ID="head" runat="server" ContentPlaceHolderID="head" >
+    <link href="css/Estilo.css" type="text/css" rel="stylesheet" id="stylesheet"  />
+    <title>Registro</title>
+</asp:Content>
 <asp:Content ID="Content" ContentPlaceHolderID="Contenido" runat="Server">
-    <form id="form2" runat="server">
-            <div class="cFL cPosRel" style="width: 450px; height: auto;">
-                <div class="cFL cPosRel" style="width: 100px; height: 25px;">
-                    <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Usuario:</span>
-                </div>
-                <div class="cFL cPosRel" style="width: 290px; height: 25px;">
-                    <asp:TextBox ID="txtUsuario" CssClass="txtControl" runat="server"></asp:TextBox>
-                    <asp:Label ID="errorUsuario" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                </div>
-                <div class="cFL cPosRel" style="width: 100px; height: 25px; margin-top: 15px;">
-                    <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Password:</span>
-                    
-                </div>
-                <div class="cFL cPosRel" style="width: 290px; height: 25px; margin-top: 15px;">
-                    <asp:TextBox ID="txtContraseña" TextMode="Password" CssClass="txtControl" runat="server"></asp:TextBox>
+    <form id="form1" runat="server">
+        <h1>Registro</h1>
+        <table class="tabla">
+            <tr>
+                <td>Usuario: 
+                </td>
+                <td>
+                    <asp:TextBox ID="txtUsuario" CssClass="textbox" runat="server" placeholder="Usuario"></asp:TextBox>
+                    <asp:Label ID="errorUsuario" CssClass="" runat="server" ForeColor="#996600"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>Contraseña: 
+                </td>
+                <td>
+                    <asp:TextBox ID="txtContraseña" TextMode="Password" CssClass="textbox" runat="server" placeholder="Contraseña"></asp:TextBox>
                     <asp:Label ID="errorPassword" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                </div> 
-                <div class="cFL cPosRel" style="width: 100px; height: 25px; margin-top: 15px;">
-                    <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Nombre:</span>
-                </div>
-                <div class="cFL cPosRel" style="width: 290px; height: 25px; margin-top: 15px;">
-                    <asp:TextBox ID="txtNombre"  CssClass="txtControl" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre: 
+                </td>
+                <td>
+                    <asp:TextBox ID="txtNombre" CssClass="textbox" runat="server" placeholder="Nombre"></asp:TextBox>
                     <asp:Label ID="errorNombre" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                </div>
-                 <div class="cFL cPosRel" style="width: 100px; height: 25px; margin-top: 15px;">
-                    <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Apellido:</span>
-                </div>
-                <div class="cFL cPosRel" style="width: 290px; height: 25px; margin-top: 15px;">
-                    <asp:TextBox ID="txtApellido"  CssClass="txtControl" runat="server"></asp:TextBox>
-                    <asp:Label ID="errorApellido" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                </div>
-                 <div class="cFL cPosRel" style="width: 100px; height: 25px; margin-top: 15px;">
-                    <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Correo:</span>
-                </div>
-                <div class="cFL cPosRel" style="width: 290px; height: 25px; margin-top: 15px;">
-                    <asp:TextBox ID="txtCorreo" CssClass="txtControl" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Apellido: 
+                </td>
+                <td>
+                    <asp:TextBox ID="txtApellido" CssClass="textbox" runat="server" placeholder="Apellido"></asp:TextBox>
+                    <asp:Label ID="errorApellido" CssClass="" runat="server" ForeColor="#996600"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>Correo: 
+                </td>
+                <td>
+                    <asp:TextBox ID="txtCorreo" CssClass="textbox" runat="server" placeholder="Correo"></asp:TextBox>
                     <asp:Label ID="errorCorreo" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                </div>
-                 <div class="cFL cPosRel" style="width: 100px; height: 25px; margin-top: 15px;">
-                    <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Fecha:</span>
-                </div>
-                <div class="cFL cPosRel" style="width: 290px; height: 25px; margin-top: 15px;">
-                    
-                    <asp:Button ID="selFecha" runat="server" Text="" CssClass="txtControl"  OnClick="selFecha_Click"/>
-
-                     
-                        <asp:Calendar style="position: absolute; z-index: 1; margin-left: 10px;" ID="Calendar1" CssClass ="calendar" runat="server" Visible="False" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" SelectedDate="2017-10-05" VisibleDate="2017-10-05" Width="200px" OnSelectionChanged="Calendar1_SelectionChanged" FirstDayOfWeek="Sunday">
-                        <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
-                        <NextPrevStyle VerticalAlign="Bottom" />
-                        <OtherMonthDayStyle ForeColor="#808080" />
-                        <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
-                        <SelectorStyle BackColor="#CCCCCC" />
-                        <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
-                        <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
-                        <WeekendDayStyle BackColor="#FFFFCC" />
-                        </asp:Calendar>
-                    
-                        
-                    
+                </td>
+            </tr>
+            <tr>
+                <td>Fecha: 
+                </td>
+                <td>
+                    <asp:Button ID="selFecha" runat="server" Text="Fecha" CssClass="textbox" OnClick="selFecha_Click" BorderStyle="Solid" Height="35px" Width="210px"  />
+                    <asp:Calendar ID="Calendar1" CssClass="calendar" runat="server" Visible="False" SelectedDate="2017-10-05" VisibleDate="2017-10-05" OnSelectionChanged="Calendar1_SelectionChanged" FirstDayOfWeek="Sunday"></asp:Calendar>
                     <asp:Label ID="errorFechaNac" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                </div>
-               
-                    <div`>
-                        <div class="cFL cPosRel" style="width: 100px; height: 25px; margin-top: 15px;">
-                        <span class="cFR cPosRel TextoLogin" style="margin-top: 7px;">Profesión:</span>
-                    </div>
-                    <div class="cFL cPosRel" style="width: 290px; height: 25px; margin-top: 15px;">
-                        <asp:TextBox ID="txtProfesion" CssClass="txtControl" runat="server"></asp:TextBox>
-                        <asp:Label ID="errorProfesion" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                    </div>
-                </div>
-                 
-                <div class="cFL cPosRel" style="width: 460px;">
-                    <div style="width: 120px; height: 30px; margin-left: auto; margin-right: auto; margin-top: 15px;">
-                        <asp:Button ID="ptnRegistrar" runat="server"  CssClass="button" OnClick="btnRegistrar_Click" Text="Registrar" />
-                    </div>
-                </div>
-            </div>
-            <asp:Label ID="lblMensaje" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
-                    
-     
+                </td>
+            </tr>
+            <tr>
+                <td>Profesión: 
+                </td>
+                <td>
+                    <asp:TextBox ID="txtProfesion" CssClass="textbox" runat="server" placeholder="Profesión"></asp:TextBox>
+                    <asp:Label ID="errorProfesion" CssClass="cFL" runat="server" ForeColor="#996600"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="Ingresar.aspx">Ingresar</a>
+                </td>
+                <td>
+                    <asp:Button ID="ptnRegistrar" runat="server" CssClass="boton-accion" OnClick="btnRegistrar_Click" Text="Registrar" />
+                </td>
+            </tr>
+        </table>
+
     </form>
 </asp:Content>

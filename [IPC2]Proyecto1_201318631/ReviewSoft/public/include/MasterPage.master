@@ -1,14 +1,18 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="publica_include_MasterPage" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<html >
 <head runat="server">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Contact Extreme - free css template</title>
+
 <meta name="keywords" content="extreme, contact page, free css, website templates, web design, dark brown color" />
 <meta name="description" content="Extreme Contact Page - free website template for everyone" />
-<link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="css/Estilos2.css" type="text/css" rel="stylesheet" id="stylesheet"  />
 <link href="css/jquery.ennui.contentslider.css" rel="stylesheet" type="text/css" media="screen,projection" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+        </asp:ContentPlaceHolder>
 </head>
 <body>
 <div id="templatemo_header_wrapper">
@@ -16,19 +20,18 @@
 
 		<div id="site_title">
             <h1><a href="index.html">
-                <strong>Extreme</strong>
+                <strong>ReviewSoft</strong>
                 <span>free css templates</span>     
             </a></h1>
         </div>
         
-        <div id="templatemo_menu">
+        <div id="templatemo_menu" >
+            <nav id="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="current">Contact Us</a></li>
-            </ul>    	
+                <asp:Literal ID="literalMenu" runat="server" ></asp:Literal>
+            </ul>
+            </nav>
+                
     	</div> <!-- end of templatemo_menu -->
         
         <div class="cleaner"></div>
@@ -108,7 +111,7 @@
 <!-- templatemo 237 extreme -->
 <!-- 
 Extreme Template 
-http://www.templatemo.com/preview/templatemo_237_extreme 
+
 -->
 </body>
 </html>
