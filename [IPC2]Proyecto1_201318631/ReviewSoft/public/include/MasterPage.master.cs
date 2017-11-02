@@ -50,30 +50,57 @@ public partial class publica_include_MasterPage : System.Web.UI.MasterPage
             else if (userType == "3")
             {
                 string html = string.Format(@"
-          <nav role=navigation>
-  
-<ul class=nav>
-  <li><a href=>Home</a></li>
-  <li><a href= class=has-submenu>Submenu</a>
-    <ul class=submenu>
-      <li><a href=>Submenu item</a></li>
-      <li><a href=>Submenu item</a></li>
-      <li><a href=>Submenu item</a></li>
-      <li><a href=>Submenu item</a></li>
-    </ul>
-  </li>  
-  <li><a href= class=has-submenu>Submenu</a>
-    <ul class=submenu>
-      <li><a href=>Submenu item</a></li>
-      <li><a href=>Submenu item</a></li>
-      <li><a href=>Submenu item</a></li>
-      <li><a href=>Submenu item</a></li>
-    </ul>
-  </li>
-  <li><a href=>About us</a></li>
-</ul>
-  
-</nav>
+
+    <li><a href='index.aspx'>Inicio</a></li>
+    <li><a href=# >Servicios</a>
+      <ul class='subMenu'>
+        <li><a href=''>Submenu1 fjfdj</a>
+        
+        <ul>
+            <li><a href='#'>Submenu1</a></li>
+            <li><a href='#'>Submenu2</a></li>
+            <li><a href='#'>Submenu3</a></li>
+            <li><a href='#'>Submenu4</a></li>
+          </ul>
+        </li>
+        <li><a href='#'>Submenu2</a>
+        
+        <ul>
+            <li><a href='#'>Submenu1</a>
+            <ul>
+            <li><a href='#'>Submenu1</a></li>
+            <li><a href='#'>Submenu2</a></li>
+          </ul>
+            
+            </li>
+            <li><a href=''>Submenu2</a></li>
+            <li><a href=''>Submenuddd</a></li>
+            <li><a href=''>Submenu4</a></li>
+          </ul></li>
+        
+        
+        <li><a href=''>Submenu3</a></li>
+        <li><a href=''>Submenu4</a>
+          
+        </li>
+      </ul>
+    </li>
+    <li><a href=''>Acerca de</a>
+      <ul class='subMenu'>
+        <li><a href=''>Submenu1</a></li>
+        <li><a href=''>Submenu2</a></li>
+        <li><a href=''>Submenu3</a></li>
+        <li><a href=''>Submenu4</a></li>
+      </ul>
+    </li>
+    <li><a href='#'>Perfil</a>
+        <ul class='subMenu'>
+            <li><a href='#'>Mis Datos</a></li>
+            <li><a href='#'>Submenu2</a></li>
+            <li><a href='#'>Submenu3</a></li>
+            <li><a href='salir.apx'>Salir</a></li>
+        </ul>
+    </li>
 
                 ");
                 this.literalMenu.Text = html;

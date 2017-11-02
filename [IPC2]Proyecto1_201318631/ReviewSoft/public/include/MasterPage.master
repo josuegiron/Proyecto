@@ -8,7 +8,7 @@
 
 <meta name="keywords" content="extreme, contact page, free css, website templates, web design, dark brown color" />
 <meta name="description" content="Extreme Contact Page - free website template for everyone" />
-<link href="css/Estilos2.css" type="text/css" rel="stylesheet" id="stylesheet"  />
+    <link href="css/menu.css" rel="stylesheet" />
 <link href="css/jquery.ennui.contentslider.css" rel="stylesheet" type="text/css" media="screen,projection" />
     <asp:ContentPlaceHolder ID="head" runat="server">
         
@@ -25,12 +25,12 @@
             </a></h1>
         </div>
         
-        <div id="templatemo_menu" >
-            <nav id="menu">
-            <ul>
+        <div id="menu" >
+           
+            <ul class='menu' >
                 <asp:Literal ID="literalMenu" runat="server" ></asp:Literal>
             </ul>
-            </nav>
+            
                 
     	</div> <!-- end of templatemo_menu -->
         

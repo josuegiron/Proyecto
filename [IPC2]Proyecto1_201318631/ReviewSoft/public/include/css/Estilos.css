@@ -436,3 +436,150 @@ ul li {
 	color: #6e6965;
 }
 /* end of copyright */
+
+
+
+#menu {
+	float: right;
+	height: 45px;
+}
+#menu li{
+    padding: 10px;
+    background: black;
+    margin: 0 0 0 0;
+}
+#menu ul{
+    border-radius: 5px, 5px, 5px, 5px;
+    margin: 25px 0 0 0;
+	padding: 0px;
+	list-style: none;
+}
+
+
+#menu .menu{
+  list-style-type: none;
+    
+  
+}
+#menu .menu li{
+     float: left;
+     position: relative;
+}
+#menu .menu a{
+  text-decoration: none;
+  color: white;
+}
+#menu .menu > li:hover, .subMenu > li:hover, .subMenu ul > li:hover {
+  background: black;
+  transition: background ease .5s;
+} 
+
+#menu .menu > li:first-of-type,
+#menu .menu > li:first-of-type a { 
+  border-radius: 5px 0 0 5px;
+}
+
+
+#menu .menu:hover li > a  {
+  opacity: .5;
+  transition: all ease .5s;
+}
+#menu .menu li:hover > a {
+  opacity: 1;
+}
+#menu .menu li:hover > .subMenu 
+{ 
+   display:block; 
+}
+#menu .menu > li:last-of-type, 
+#menu .menu > li:last-of-type a { 
+  border-radius: 0 5px 5px 0;
+}
+
+
+
+#menu .subMenu{
+  border-top: 5px solid transparent; 
+  list-style-type: none;
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top:100%;
+    
+
+}
+
+#menu .subMenu:before {
+ content: ""; 
+ position: absolute;
+ z-index: 0; /* bring in front of border */
+ margin-top: 5px; /*1*/
+ /*2*/
+ top: -10px;
+ /* borders for up arrow */
+ border-left: 10px solid transparent;
+ border-right: 10px solid transparent;
+ border-bottom: 10px solid #434343;
+}
+#menu .subMenu li{
+    position:relative;
+    width:150px; 
+}
+
+#menu .subMenu ul{
+border-left: 5px solid transparent; 
+    position:absolute; /* Esta posición es relativa al <li> que contiene a este <ul> */ 
+    left:100%; /* Para que no monte sobre el <li> */ 
+    top:0px; 
+    display:none; 
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+#menu .subMenu ul:before {
+ content: ""; 
+ position: absolute;
+ z-index: 0; /* bring in front of border */
+ margin-right: 5px; /*1*/
+ /*2*/
+ left: -15px;
+ /* borders for up arrow */
+ border-left: 10px solid transparent;
+ border-right: 10px solid #434343;
+ border-bottom: 10px solid transparent;
+ border-top: 10px solid transparent;
+}
+
+
+#menu .subMenu li:hover > ul 
+{ 
+   display:block; 
+}
+
+
+
+#menu .subMenu:hover li > a {
+  opacity: .5;
+  transition: all ease .5s;
+}
+#menu .subMenu li:hover > a {
+  opacity: 1;
+}
+
+
+
+#menu li:first-of-type {
+  border-radius: 5px 5px 0 0; /*1*/
+}
+#menu li:last-of-type {
+  border-radius: 0 0 5px 5px; /*1*/
+}
+#menu .subMenu a {
+  font-size: 90%; /*1*/
+  margin: 3px; /*2*/
+  border-radius: 5px;
+  transition: background ease .3s; /*3*/
+}
